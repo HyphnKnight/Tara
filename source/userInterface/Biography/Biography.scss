@@ -1,0 +1,74 @@
+.Biography {
+  font-weight: 300;
+
+  position : absolute;
+  top : 0;
+  left : 0;
+
+  overflow-x : hidden;
+  overflow-y : scroll;
+
+  width : 100%;
+  height: 100%;
+
+  transition : 0.4s ease opacity;
+  transform : translate3d(-100%,0,0);
+
+  opacity : 0;
+  background-color : #d3d7d7;
+  .Application.state-view-Biography & {
+    transition : 0.4s ease opacity 0.4s;
+    transform : translate3d(0,0,0);
+
+    opacity : 1;
+  }
+}
+
+.Biography .Biography-Eyes {
+  position: relative;
+  bottom: 0;
+  left: -240px;
+  margin-left: 50%;
+}
+
+.Biography-Summary {
+  font-weight: lighter;
+  display: block;
+  width: 80%;
+  max-width: 720px;
+  margin: 120px auto 40px;
+  line-height: 24px;
+}
+
+li.Biography-Job {
+  list-style: none;
+  line-height: 24px;
+  font-weight: lighter;
+}
+
+.Biography-Experiance-Title {
+  font-size: 18px;
+  font-weight: normal;
+}
+
+li.Biography-Job.state-subtitle {
+  margin: 20px 0 5px;
+  font-weight: normal;
+}
+
+.Biography-Job a {
+  text-decoration: none;
+  color: black;
+  font-style: italic;
+}
+.Biography-Experiance {
+  padding: 0;
+  display: block;
+  width: 80%;
+  max-width: 720px;
+  margin: 0 auto;
+}
+ul.Biography-Jobs {
+  padding: 0;
+  width: 100%;
+}

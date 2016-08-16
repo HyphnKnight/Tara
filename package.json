@@ -1,0 +1,24 @@
+{
+  "name": "tara",
+  "version": "1.0.0",
+  "description": "Works of Tara Maria Gonzalez",
+  "scripts": {
+    "setup": "npm install && node -e \"require('skedge-pack')({skeleton:true});\" ",
+    "dev": "node -e \"require('skedge-pack')({ flags: 'server watch' });\" ",
+    "prod": "node -e \"require('skedge-pack')({ flags: 'minify test full offline' });\" "
+  },
+  "author": "Rafe Lepre",
+  "license": "ISC",
+  "dependencies": {
+    "highlight.js": "^9.4.0",
+    "immutable": "^3.8.0",
+    "moment": "^2.13.0",
+    "moment-timezone": "^0.5.4",
+    "offline-plugin": "^3.2.1",
+    "react": "^15.0.1",
+    "react-dom": "^15.0.1",
+    "react-redux": "^4.4.5",
+    "redux": "^3.4.0",
+    "skedge-pack": "github:skedgeme/skedge-pack#v1.0.0"
+  }
+}

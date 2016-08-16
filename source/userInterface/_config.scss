@@ -1,0 +1,108 @@
+/*
+  _config.scss
+*/
+
+/* Variables */
+
+// Colors
+
+// Fonts
+
+// Page Breaks
+
+$brMobile : 320px;
+$brSmall : 550px;
+$brMedium : 840px;
+$brLarge : 1100px;
+
+/* Templates */
+
+.Template-button {
+  font-size : 12px;
+  font-weight : lighter;
+  line-height : 43px;
+
+  box-sizing : border-box;
+  height : 43px;
+  padding : 0 15px;
+
+  cursor : pointer;
+  user-select : none;
+  text-transform : uppercase;
+
+  color : #fff;
+  border-radius : 7px;
+  background : #e21836;
+  &::after {
+    display : inline-block;
+
+    width : 6px;
+    height : 9px;
+    margin-left : 10px;
+
+    content : '';
+
+    background-repeat : no-repeat;
+    background-size : contain;
+  }
+}
+
+.Template-shadow-1 {
+  transform : translate3d(0,0,0);
+
+  box-shadow : 0 1px 3px rgba(0,0,0,0.12),0 1px 2px rgba(0,0,0,0.24);
+}
+
+.Template-shadow-2 {
+  transform : translate3d(0,-2px,0);
+
+  box-shadow : 0 3px 6px rgba(0,0,0,0.16),0 3px 6px rgba(0,0,0,0.23);
+}
+
+.Template-shadow-3 {
+  transform : translate3d(0,-4px,0);
+
+  box-shadow : 0 10px 20px rgba(0,0,0,0.19),0 6px 6px rgba(0,0,0,0.23);
+}
+
+.Template-shadow-4 {
+  transform : translate3d(0,-6px,0);
+
+  box-shadow : 0 14px 28px rgba(0,0,0,0.25),0 10px 10px rgba(0,0,0,0.22);
+}
+
+.Template-shadow-5 {
+  transform : translate3d(0,-10px,0);
+
+  box-shadow : 0 19px 38px rgba(0,0,0,0.3),0 15px 12px rgba(0,0,0,0.22);
+}
+
+/* Mixins */
+
+@mixin respond-to( $media ) {
+  @if $media == mobile {
+    @media only screen and (max-width: $brMobile) {
+      @content;
+    }
+  }
+  @if $media == small {
+    @media only screen and (min-width: $brMobile + 1) and (max-width: $brSmall) {
+      @content;
+    }
+  }
+  @else if $media == medium {
+    @media only screen and (min-width: $brSmall + 1) and (max-width: $brMedium) {
+      @content;
+    }
+  }
+  @else if $media == large {
+    @media only screen and (min-width: $brMedium + 1) and (max-width: $brLarge) {
+      @content;
+    }
+  }
+  @else if $media == huge {
+    @media only screen and (min-width: $brLarge + 1) {
+      @content;
+    }
+  }
+}
